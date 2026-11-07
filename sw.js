@@ -1,0 +1,6 @@
+const VERSION='kejian-pwa-1d85f193c980';
+const SHELL=['./','./index.html','./style.css','./app.js','./personal.js','./manifest.webmanifest','./timetable.json','./assets/emblem-transparent.png','./assets/campus-purple.png','./icons/icon-192.png','./icons/icon-512.png','./icons/maskable-512.png'];
+self.addEventListener('install',event=>event.waitUntil(caches.open(VERSION).then(cache=>cache.addAll(SHELL))));
+self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('kejian-pwa-')&&key!==VERSION).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
+self.addEventListener('message',event=>{if(event.data==='SKIP_WAITING')self.skipWaiting()});
+self.addEventListener('fetch',event=>{const request=event.request,url=new URL(request.url);if(request.method!=='GET'||url.origin!==self.location.origin||!url.pathname.startsWith(new URL(self.registration.scope).pathname))return;if(url.pathname.startsWith(new URL('./quiz/',self.registration.scope).pathname))return;if(request.mode==='navigate'){event.respondWith(fetch(request).catch(()=>caches.match('./index.html')));return}event.respondWith(caches.match(request).then(hit=>hit||fetch(request).then(response=>{if(response.ok){const copy=response.clone();caches.open(VERSION).then(cache=>cache.put(request,copy))}return response}))) });

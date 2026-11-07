@@ -1,0 +1,67 @@
+/* 外观设置独立于学习记录；浅色沿用既有配色。 */
+.topbar-tools{display:flex;align-items:center;gap:16px;flex-shrink:0}
+.theme-toggle{min-width:88px;min-height:44px;padding:9px 12px;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--teal);font-size:13px;font-weight:600;white-space:nowrap;flex-shrink:0}
+.theme-toggle:hover{border-color:var(--teal)}
+html[data-theme="light"]{color-scheme:light}
+html[data-theme="dark"]{color-scheme:dark;--bg:#111c19;--paper:#1c2b26;--ink:#e5eee8;--muted:#a4b8ad;--line:#3b5146;--teal:#80d4bc;--teal-dark:#afe7d6;--mint:#263e33;--orange:#e5b778;--red:#f0aaa2;--shadow:0 8px 28px rgba(0,0,0,.14)}
+html[data-theme="dark"] .btn{background:#2a3e32;color:var(--ink)}
+html[data-theme="dark"] .btn.primary,html[data-theme="dark"] .rating-row .selected,html[data-theme="dark"] .review-tabs .active,html[data-theme="dark"] .lab-tabs .active{background:#24745f;color:#f3fff8}
+html[data-theme="dark"] .btn.outline,html[data-theme="dark"] .shortcut,html[data-theme="dark"] .continue-card,html[data-theme="dark"] .chapter-card,html[data-theme="dark"] .question-row,html[data-theme="dark"] .checkpoint,html[data-theme="dark"] .modal,html[data-theme="dark"] .review-tabs a,html[data-theme="dark"] .review-tabs button,html[data-theme="dark"] .lab-tabs a,html[data-theme="dark"] .lab-tabs button,html[data-theme="dark"] .exam-review-item{background:var(--paper);border-color:var(--line)}
+html[data-theme="dark"] .btn.outline{color:var(--teal)}
+html[data-theme="dark"] .btn.quiet,html[data-theme="dark"] .btn.subtle-btn,html[data-theme="dark"] .btn.icon-btn{background:transparent}
+html[data-theme="dark"] .btn.quiet{color:var(--muted)}
+html[data-theme="dark"] .btn.subtle-btn{color:var(--teal)}
+html[data-theme="dark"] .brand-mark,html[data-theme="dark"] .welcome-card{background:#174f42}
+html[data-theme="dark"] .welcome-card .btn{background:#263e33;color:#c0f0dc}
+html[data-theme="dark"] .goal-card,html[data-theme="dark"] .result-hero{background:#24382b;border-color:#40533c}
+html[data-theme="dark"] .ring-track{stroke:#415a46}
+html[data-theme="dark"] .result-circle{border-color:#527458}
+html[data-theme="dark"] .shortcut:nth-child(2) .shortcut-icon{background:#3c4027;color:#d5d58d}
+html[data-theme="dark"] .shortcut:nth-child(3) .shortcut-icon{background:#483925;color:#edbd88}
+html[data-theme="dark"] .shortcut:nth-child(4) .shortcut-icon{background:#35384b;color:#bdc4f1}
+html[data-theme="dark"] .bottom-nav{background:rgba(28,43,38,.98);box-shadow:0 8px 35px #0004}
+html[data-theme="dark"] .bottom-nav a{color:#abc0b3}
+html[data-theme="dark"] .bottom-nav a.active{background:#2c483a;color:var(--teal)}
+html[data-theme="dark"] .notice{background:#253b30;color:#c0d6c7}
+html[data-theme="dark"] .notice.amber,html[data-theme="dark"] .pill.amber{background:#493d25;color:#f0cf8c}
+html[data-theme="dark"] .notice.danger{background:#482f2c;color:var(--red)}
+html[data-theme="dark"] .notice.success{background:#234735;color:#b4e7ca}
+html[data-theme="dark"] .random-banner,html[data-theme="dark"] .due-card{background:#233d32;border-color:#436b58}
+html[data-theme="dark"] .due-card strong,html[data-theme="dark"] .streak-card>strong{color:var(--teal)}
+html[data-theme="dark"] .banner-icon,html[data-theme="dark"] .segmented .selected{background:#304c3e;color:var(--teal)}
+html[data-theme="dark"] .segmented,html[data-theme="dark"] .progress-track,html[data-theme="dark"] .stats-rank-track,html[data-theme="dark"] .stats-day-track{background:#2b3d31}
+html[data-theme="dark"] input:not([type=checkbox]):not([type=radio]),html[data-theme="dark"] select,html[data-theme="dark"] textarea{background:#16251e;border-color:#526a59;color:var(--ink)}
+html[data-theme="dark"] input::placeholder,html[data-theme="dark"] textarea::placeholder{color:#91a79a}
+html[data-theme="dark"] .modal-backdrop{background:rgba(0,0,0,.6)}
+html[data-theme="dark"] .empty-symbol{background:#2b4233;color:#b4d0ba}
+html[data-theme="dark"] .spinner{border-color:#3a5642;border-top-color:var(--teal)}
+html[data-theme="dark"] .toast{background:#e2eee5;color:#172b20}
+html[data-theme="dark"] .pill{background:#284332;color:#a3e2c6}
+html[data-theme="dark"] .pill.pale{background:#30432e;color:#c2d8b8}
+html[data-theme="dark"] .pill.neutral{background:#3c3d34;color:#d3d1b7}
+html[data-theme="dark"] .choice,html[data-theme="dark"] .choice-list li,html[data-theme="dark"] .choice-list>p{background:#213329;border-color:#49604e}
+html[data-theme="dark"] .choice:not(:disabled):hover{background:#2a4233;border-color:var(--teal)}
+html[data-theme="dark"] .choice-key{border-color:#5c7663}
+html[data-theme="dark"] .choice.is-correct{background:#234531;border-color:#81b68c}
+html[data-theme="dark"] .choice.is-correct .choice-key{background:#2d7454;border-color:#80bc95;color:#fff}
+html[data-theme="dark"] .choice.is-wrong{background:#4a302c;border-color:#c68c83}
+html[data-theme="dark"] .choice.is-wrong .choice-key{background:#994d45;border-color:#d89d95;color:#fff}
+html[data-theme="dark"] .feedback,html[data-theme="dark"] .short-answer,html[data-theme="dark"] .diagnosis-card,html[data-theme="dark"] .review-plan,html[data-theme="dark"] .exam-saved-draft,html[data-theme="dark"] .exam-review-body .choice-list p{background:#24382c}
+html[data-theme="dark"] .checkpoint.auto-mark{background:#413927;border-color:#8d754e}
+html[data-theme="dark"] mark{background:#66542b;color:#fff0b6}
+html[data-theme="dark"] .review-tabs .active,html[data-theme="dark"] .lab-tabs .active{background:#24745f;color:#f3fff8}
+html[data-theme="dark"] .review-tabs [aria-disabled=true],html[data-theme="dark"] .lab-tabs [aria-disabled=true]{background:#293a30;color:var(--muted)}
+html[data-theme="dark"] .lab-selection{background:#2b4432}
+html[data-theme="dark"] .test-banner{background:#42361c;border-color:#b18d39;color:#f2d798}
+html[data-theme="dark"] .debug-facts div,html[data-theme="dark"] .stats-ai .metric{background:#26382c}
+html[data-theme="dark"] .debug-facts dt,html[data-theme="dark"] .exam-add-short small,html[data-theme="dark"] .exam-timer>span,html[data-theme="dark"] .exam-history-row small{color:var(--muted)}
+html[data-theme="dark"] .exam-chapter-options,html[data-theme="dark"] .exam-history-row{border-color:var(--line)}
+html[data-theme="dark"] .exam-timer{background:#233b2e;border-color:#486b54}
+html[data-theme="dark"] .exam-time-low{color:#f1c578}
+html[data-theme="dark"] .choice.exam-selected{background:#254a3b;border-color:var(--teal);box-shadow:inset 0 0 0 1px var(--teal)}
+html[data-theme="dark"] .exam-selected .choice-key{background:#28775f;color:#f3fff8}
+html[data-theme="dark"] .exam-selected .choice-note,html[data-theme="dark"] .exam-history-row strong,html[data-theme="dark"] .exam-review-item summary>strong{color:var(--teal)}
+html[data-theme="dark"] .btn.exam-filled,html[data-theme="dark"] .exam-grade-card .selected{background:#2a4937;border-color:#80b393;color:#c0efd0}
+html[data-theme="dark"] .exam-grade-card .selected{border-color:var(--teal)}
+@media(max-width:760px){.topbar-tools{gap:8px}.theme-toggle{min-width:82px;padding:9px 10px}}
+@media(max-width:380px){.topbar{gap:8px}.brand{gap:8px;letter-spacing:.5px}.theme-toggle{min-width:78px;font-size:12px}}

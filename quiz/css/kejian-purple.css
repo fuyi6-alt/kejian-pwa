@@ -1,0 +1,6 @@
+
+:root{--bg:#faf8fc;--paper:#fff;--ink:#292035;--muted:#6b5a83;--line:#e9e2ef;--teal:#611c86;--teal-dark:#531778;--mint:#f0e7f7;--shadow:0 8px 28px rgba(79,25,121,.045)}
+html[data-theme="dark"]{--bg:#1c1424;--paper:#2a1e35;--ink:#f4edf8;--muted:#c4b5d0;--line:#4b3b5c;--teal:#c493df;--teal-dark:#e0b9f0;--mint:#392849}
+.kejian-return{display:inline-block;margin:12px 0 4px;padding:8px 13px;border-radius:13px;background:var(--mint);color:var(--teal);font-size:14px;font-weight:600}
+.topbar{border-color:var(--line)}.brand-mark{background:#611c86;color:#fff}.btn.primary,.review-tabs .active,.lab-tabs .active{background:#611c86;color:#fff}.btn.outline{color:var(--teal)}.bottom-nav a.active{color:var(--teal)}
+html[data-theme="dark"] .btn.primary,html[data-theme="dark"] .review-tabs .active,html[data-theme="dark"] .lab-tabs .active{background:#611c86;color:#fff}
